@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Hello, world! - BufPublicMeetings</title><meta name="gridsome:hash" content="a5042d3055e979144c6535eec0adf7b18fbb0d73"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.23"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link rel="preload" href="/assets/css/4.styles.6388b256.css" as="style"><link rel="preload" href="/assets/js/app.688a5d1f.js" as="script"><link rel="preload" href="/assets/js/page--src--pages--index-vue.4ab56e7c.js" as="script"><link rel="prefetch" href="/assets/js/page--node-modules--gridsome--app--pages--404-vue.603f5f4a.js"><link rel="prefetch" href="/assets/js/page--src--templates--meeting-vue.c2392632.js"><link rel="stylesheet" href="/assets/css/4.styles.6388b256.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="app" class="container mx-auto px-4 flex"><aside class="w-1/4 sticky top-0 h-screen overflow-y-scroll px-3"><div class="my-5"><h2 class="font-medium text-2xl mb-2">Sorting &amp; Filters</h2><div class="border rounded p-3 mb-4"><fieldset><legend class="font-medium text-xl">Sort by:</legend><div><label class="cursor-pointer hover:underline flex items-center py-1"><input type="radio" name="sorting" value="[object Object]" checked="checked" class="mr-2"><span>Meeting Date (Desc)</span></label></div><div><label class="cursor-pointer hover:underline flex items-center py-1"><input type="radio" name="sorting" value="[object Object]" class="mr-2"><span>Meeting Date (Asc)</span></label></div><div><label class="cursor-pointer hover:underline flex items-center py-1"><input type="radio" name="sorting" value="[object Object]" class="mr-2"><span>Meeting Name (Desc)</span></label></div><div><label class="cursor-pointer hover:underline flex items-center py-1"><input type="radio" name="sorting" value="[object Object]" class="mr-2"><span>Meeting Name (Asc)</span></label></div></fieldset></div><div class="border rounded p-3 mb-4"><label for="showPrevious" class="cursor-pointer hover:underline flex items-center py-1"><input id="showPrevious" type="checkbox" name="showPrevious" value="true" class="mr-2 cursor-pointer"><span>Show Past Meetings</span></label></div><div class="border rounded p-3"><fieldset><legend class="font-medium text-xl">Filter Meeting Type:</legend><!----><div><label for="planning-board" class="cursor-pointer hover:underline flex items-center py-1"><input id="planning-board" type="checkbox" name="filtering" value="planning-board" class="mr-2 cursor-pointer"><div><span class="mr-2">Planning Board</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">23
+                </span></div></label></div><div><label for="preservation-board" class="cursor-pointer hover:underline flex items-center py-1"><input id="preservation-board" type="checkbox" name="filtering" value="preservation-board" class="mr-2 cursor-pointer"><div><span class="mr-2">Preservation Board</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">23
+                </span></div></label></div><div><label for="zoning-board-of-appeals" class="cursor-pointer hover:underline flex items-center py-1"><input id="zoning-board-of-appeals" type="checkbox" name="filtering" value="zoning-board-of-appeals" class="mr-2 cursor-pointer"><div><span class="mr-2">Zoning Board of Appeals</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">11
+                </span></div></label></div><div><label for="education-committee" class="cursor-pointer hover:underline flex items-center py-1"><input id="education-committee" type="checkbox" name="filtering" value="education-committee" class="mr-2 cursor-pointer"><div><span class="mr-2">Education Committee</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">5
+                </span></div></label></div><div><label for="police-oversight" class="cursor-pointer hover:underline flex items-center py-1"><input id="police-oversight" type="checkbox" name="filtering" value="police-oversight" class="mr-2 cursor-pointer"><div><span class="mr-2">Police Oversight</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">2
+                </span></div></label></div><div><label for="common-council" class="cursor-pointer hover:underline flex items-center py-1"><input id="common-council" type="checkbox" name="filtering" value="common-council" class="mr-2 cursor-pointer"><div><span class="mr-2">Common Council</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">8
+                </span></div></label></div><div><label for="community-development-committee" class="cursor-pointer hover:underline flex items-center py-1"><input id="community-development-committee" type="checkbox" name="filtering" value="community-development-committee" class="mr-2 cursor-pointer"><div><span class="mr-2">Community Development Committee</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">7
+                </span></div></label></div><div><label for="legislation-committee" class="cursor-pointer hover:underline flex items-center py-1"><input id="legislation-committee" type="checkbox" name="filtering" value="legislation-committee" class="mr-2 cursor-pointer"><div><span class="mr-2">Legislation Committee</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">7
+                </span></div></label></div><div><label for="finance-committee" class="cursor-pointer hover:underline flex items-center py-1"><input id="finance-committee" type="checkbox" name="filtering" value="finance-committee" class="mr-2 cursor-pointer"><div><span class="mr-2">Finance Committee</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">7
+                </span></div></label></div><div><label for="civil-service-committee" class="cursor-pointer hover:underline flex items-center py-1"><input id="civil-service-committee" type="checkbox" name="filtering" value="civil-service-committee" class="mr-2 cursor-pointer"><div><span class="mr-2">Civil Service Committee</span><span class="px-2 inline-block text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">7
+                </span></div></label></div></fieldset></div></div></aside><main role="main" class="w-3/4 ml-auto px-3"><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2160/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 5, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2031&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2031&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, APRIL 5, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Cancelled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/civil-service-committee/council-committee-meeting/2242/" class="hover:underline">
+              Civil Service Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 6, 2021 - 9:45AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2037&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2037&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 6, 2021  9:45 AMBoard:	Civil Service CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/finance-committee/council-committee-meeting/2241/" class="hover:underline">
+              Finance Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 6, 2021 - 10:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2028&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2028&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 6, 2021  10:00 AMBoard:	Finance CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/education-committee/special-council-committee-meeting/2240/" class="hover:underline">
+              Education Committee - Special Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 6, 2021 - 11:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2027&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2027&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 6, 2021  11:00 AMBoard:	Education CommitteeType:	Special Council Committee MeetingStatus:	Scheduled	Teleconference	Teleconference, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/legislation-committee/council-committee-meeting/2243/" class="hover:underline">
+              Legislation Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 6, 2021 - 1:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2038&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2038&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 6, 2021  1:00 PMBoard:	Legislation CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/community-development-committee/council-committee-meeting/2244/" class="hover:underline">
+              Community Development Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 6, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="FileOpen.aspx?Type=14&amp;ID=2039&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="FileOpen.aspx?Type=1&amp;ID=2039&amp;Inline=True" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="#" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 6, 2021  2:00 PMBoard:	Community Development CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/common-council/regular-meeting/2245/" class="hover:underline">
+              Common Council - Regular Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 13, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, APRIL 13, 2021  2:00 PMBoard:	Common CouncilType:	Regular MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2184/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 15, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, APRIL 15, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2161/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 19, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, APRIL 19, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/police-oversight/council-committee-meeting/2219/" class="hover:underline">
+              Police Oversight - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 21, 2021 - 11:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, APRIL 21, 2021  11:00 AMBoard:	Police OversightType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2146/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 21, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, APRIL 21, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2185/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              April 29, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, APRIL 29, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2162/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 3, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, MAY 3, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2186/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 13, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, MAY 13, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2163/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 17, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, MAY 17, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/education-committee/council-committee-meeting/2214/" class="hover:underline">
+              Education Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 18, 2021 - 12:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, MAY 18, 2021  12:00 AMBoard:	Education CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2147/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 19, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, MAY 19, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2187/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              May 27, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, MAY 27, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2164/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 1, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, JUNE 1, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2188/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 10, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, JUNE 10, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2165/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 14, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, JUNE 14, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2148/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 16, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, JUNE 16, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2189/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 24, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, JUNE 24, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2166/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              June 28, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, JUNE 28, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2190/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              July 8, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, JULY 8, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2167/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              July 12, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, JULY 12, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2149/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              July 21, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, JULY 21, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2191/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              July 22, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, JULY 22, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2168/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              July 26, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, JULY 26, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2192/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 9, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, SEPTEMBER 9, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2169/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 13, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, SEPTEMBER 13, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/education-committee/council-committee-meeting/2215/" class="hover:underline">
+              Education Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 14, 2021 - 12:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, SEPTEMBER 14, 2021  12:00 AMBoard:	Education CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2150/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 15, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, SEPTEMBER 15, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2193/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 23, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, SEPTEMBER 23, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2170/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              September 27, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, SEPTEMBER 27, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2194/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              October 7, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, OCTOBER 7, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2171/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              October 12, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, OCTOBER 12, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2151/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              October 20, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, OCTOBER 20, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2195/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              October 21, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, OCTOBER 21, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2172/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              October 25, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, OCTOBER 25, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2196/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 4, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, NOVEMBER 4, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2173/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 8, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, NOVEMBER 8, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/education-committee/council-committee-meeting/2216/" class="hover:underline">
+              Education Committee - Council Committee Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 9, 2021 - 12:00AM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>TUESDAY, NOVEMBER 9, 2021  12:00 AMBoard:	Education CommitteeType:	Council Committee MeetingStatus:	Scheduled	Video Conference	FB Live, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2152/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 17, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, NOVEMBER 17, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2197/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 18, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, NOVEMBER 18, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2174/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              November 22, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, NOVEMBER 22, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2198/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              December 2, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, DECEMBER 2, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2175/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              December 6, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, DECEMBER 6, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/zoning-board-of-appeals/regular/2153/" class="hover:underline">
+              Zoning Board of Appeals - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              December 15, 2021 - 2:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>WEDNESDAY, DECEMBER 15, 2021  2:00 PMBoard:	Zoning Board of AppealsType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/preservation-board/regular/2199/" class="hover:underline">
+              Preservation Board - Regular
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              December 16, 2021 - 3:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>THURSDAY, DECEMBER 16, 2021  3:00 PMBoard:	Preservation BoardType:	RegularStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div><div><div class="border rounded p-4 mb-4"><div class="flex"><h2 class="text-2xl font-medium"><a href="/planning-board/regular-planning-board-meeting/2176/" class="hover:underline">
+              Planning Board - Regular Planning Board Meeting
+            </a></h2></div><div class="flex mb-3"><div><span class="text-muted font-weight-bold">
+              December 20, 2021 - 4:00PM
+            </span></div></div><div class="mb-4"><div class="flex -mx-4"><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Agenda
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Journal
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Summary
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Proceedings
+              </a></div><div class="px-4"><a href="" class="text-teal-700 hover:text-teal-900 hover:underline">
+                Video
+              </a></div></div></div><p>MONDAY, DECEMBER 20, 2021  4:00 PMBoard:	Planning BoardType:	Regular Planning Board MeetingStatus:	Scheduled	Webex Virtual Meeting	webex.com, Buffalo, NY  14202</p></div></div></main></div>
+    <script src="/assets/js/app.688a5d1f.js" defer></script><script src="/assets/js/page--src--pages--index-vue.4ab56e7c.js" defer></script>
+  </body>
+</html>
